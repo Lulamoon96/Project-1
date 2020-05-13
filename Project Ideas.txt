@@ -1,1 +1,3 @@
-Ideas for project
+Ideas for project 
+
+I like the idea of using Nextflix API
