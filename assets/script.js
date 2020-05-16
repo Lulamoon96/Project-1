@@ -11,3 +11,6 @@ $.ajax({
     console.log(response)
 
 })
+// $('#recipeModal').on('shown.bs.modal', function () {
+//     $('#findRecipes').trigger('focus')
+//   })
