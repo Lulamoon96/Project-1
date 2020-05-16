@@ -1,3 +1,27 @@
-Ideas for project 
+Ideas for project
+
+This is fun
+
+This is weird
 
 I like the idea of using Nextflix API
+
+Something about restaurants 
+Something about recipes
+Food additives?
+Grocery list for ingredients
+
+Meal Planner:
+User chooses recipes for breakfast, lunch, and dinner
+Meal planner calculates macros
+Google Maps directs you to the nearest grocery stores
+(Or possibly change Google Maps API?)
+
+
+Planned APIs:
+
+https://www.edamam.com/
+
+https://rapidapi.com/apidojo/api/tasty/endpoints
+
+https://developers.google.com/maps/documentation/javascript/tutorial
