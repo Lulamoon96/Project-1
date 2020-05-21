@@ -1,12 +1,16 @@
-.navHead{
-    color: honeydew;
-    font-family: Arial, Helvetica, sans-serif;
-}
-.jumbotron {
+
+.jumboHead {
     text-align: center;
     background-color: gray;
     color: honeydew;
     font-family: Arial, Helvetica, sans-serif;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    padding: 0;
+}
+.firstRow{
+    /* margin-top: 25%; */
 }
 
 .separator {
@@ -18,10 +22,14 @@
 .mapcanvas {
 
   width: 900px; 
-  height: 500px;
+  height: 300px;
 
 }
 
-.card-title {
-  text-align: center;
+.jumboBottom{
+    margin-top: 5%;
+    padding-top: 15px;
+    width: 100%;
+    text-align: center;
+    /* padding: 0; */
 }

@@ -11,59 +11,42 @@
 </head>
 
 <body>
-
-    <nav class="navbar navbar-dark bg-dark d-flex justify-content-center navHead">
-        Mealplanner
-    </nav>
-
-    <div class="jumbotron jumbotron-fluid">
-
-        <div class="container">
-
-            <h1 class="display-4">Mealplanner</h1>
-            <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
-            <p class="lead">A Healthy Way to Start Your Day</p>
-
-        </div>
-
+    <div class="jumbotron jumbotron-fluid jumboHead">
+        <h1 class="display-4">Mealplanner</h1>
+        <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+        <p class="lead">A Healthy Way to Start Your Day</p>
     </div>
-
-    <div class="div container">
-
-        <div class="div row">
-
-            <div class="div col-md-4">
-
+    <div class="container mainDiv">
+        <div class="row firstRow">
+            <div class="col-md-4 ">
                 <div class="card" style="width: 18rem;">
-
                     <img src="..." class="card-img-top" alt="...">
-
                     <div class="card-body">
+
                         <h5 class="card-title">Breakfast</h5>
                         <p class="card-text">Start the day right!</p>
                     </div>
 
+                        <h5 class="card-title">Breakfast</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+
+                    </div>
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item" id="BreakfastRecipe">Eggs Benedict</li>
                         <li class="list-group-item" id="BreakfastSource">Gordan Ramsey's Kitchen</li>
                         <li class="list-group-item" id="BreakfastCalories">500 Calories</li>
                     </ul>
-
                     <div class="card-body" style="text-align: center;">
                         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#breakfastModal">
                             Search Recipes
                         </button>
                     </div>
-
                 </div>
-
                 <!-- Breakfast Modal -->
                 <div class="modal fade" id="breakfastModal" tabindex="-1" role="dialog" aria-hidden="true">
-
                     <div class="modal-dialog" role="document">
-
                         <div class="modal-content">
-
                             <div class="modal-header">
                                 <h5 class="modal-title" id="breakfastModalTitle">Add Breakfast Recipes</h5>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -71,8 +54,17 @@
                                 </button>
                             </div>
 
-                            <div class="modal-body">
-                                ...
+                                <div class="modal-body">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control">
+                                        <button type="button" class="btn btn-outline-secondary searchRecipes">Search for
+                                            Recipes</button>
+                                    </div>
+
+                                    <div class="div recipeResults"></div>
+                                </div>
+
+
                             </div>
 
                             <div class="modal-footer">
@@ -81,126 +73,114 @@
                             </div>
 
                         </div>
-
                     </div>
-
                 </div>
-
             </div>
-
             <div class="div col-md-4">
-
                 <div class="card" style="width: 18rem;">
-
                     <img src="..." class="card-img-top" alt="...">
-
                     <div class="card-body">
+
                         <h5 class="card-title">Lunch</h5>
                         <p class="card-text">What's for Lunch?!</p>
                     </div>
 
+                        <h5 class="card-title">Lunch</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+
+                    </div>
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item" id="LunchRecipe">Salad</li>
                         <li class="list-group-item" id="LunchSource">Avi's Kitchen</li>
                         <li class="list-group-item" id="LunchCalories">300 Calories</li>
                     </ul>
-
                     <div class="card-body" style="text-align: center;">
                         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#lunchModal">
                             Search Recipes
                         </button>
                     </div>
-
                 </div>
-
                 <!-- Lunch Modal -->
                 <div class="modal fade" id="lunchModal" tabindex="-1" role="dialog" aria-hidden="true">
-
                     <div class="modal-dialog" role="document">
-
                         <div class="modal-content">
-
                             <div class="modal-header">
                                 <h5 class="modal-title" id="lunchModalTitle">Add Lunch Recipes</h5>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
-
                             <div class="modal-body">
-                                ...
-                            </div>
 
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Save changes</button>
-                            </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control">
+                                        <button type="button" class="btn btn-outline-secondary searchRecipes">Search for
+                                            Recipes</button>
+                                    </div>
+                                    <div class="div recipeResults"></div>
+                                </div>
 
+                            </div>
                         </div>
-
                     </div>
-
                 </div>
-
             </div>
-
             <div class="div col-md-4">
-
                 <div class="card" style="width: 18rem;">
-
                     <img src="..." class="card-img-top" alt="...">
-
                     <div class="card-body">
+
                         <h5 class="card-title">Dinner</h5>
                         <p class="card-text">Dinner Time!</p>
                     </div>
 
+                        <h5 class="card-title">Dinner</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+
+                    </div>
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item" id="DinnerRecipe">Mahi Mahi Tacos</li>
                         <li class="list-group-item" id="DinnerSource">Fisherman's warf</li>
                         <li class="list-group-item" id="DinnerCalories">600 Calories</li>
                     </ul>
-
                     <div class="card-body" style="text-align: center;">
                         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#dinnerModal">
                             Search Recipes
                         </button>
                     </div>
-
                 </div>
-
                 <!-- Dinner Modal -->
                 <div class="modal fade" id="dinnerModal" tabindex="-1" role="dialog" aria-hidden="true">
-
                     <div class="modal-dialog" role="document">
-
                         <div class="modal-content">
-
                             <div class="modal-header">
                                 <h5 class="modal-title" id="dinnerModalTitle">Add Lunch Recipes</h5>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
-
                             <div class="modal-body">
-                                ...
-                            </div>
+
+                                    <div class="form-group">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <button type="button" class="btn btn-outline-secondary searchRecipes">Search for
+                                        Recipes</button>
+
+                                    <div class="div recipeResults"></div>
 
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                                 <button type="button" class="btn btn-primary">Save changes</button>
                             </div>
-
                         </div>
-
                     </div>
-
                 </div>
-
             </div>
-
-            <!-- <div class="div col-md-4">
+        </div>
+        <!-- <div class="div col-md-4">
                 <div class="card" style="width: 18rem;">
                     <img src="..." class="card-img-top" alt="...">
                     <div class="card-body">
@@ -277,6 +257,7 @@
         </div> -->
 
         <div class="div row">
+
             <div class="jumbotron jumbotron-fluid" style="margin-top: 50px; width: 100%;">
                 <div class="container">
 
@@ -298,6 +279,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <script src = "assets/script.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAaY9_MP47BQom-py2dPcioOVrQYdlLIlU&callback=initMap" async defer></script>
+
 
 </body>
 
