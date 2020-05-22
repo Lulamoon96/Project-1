@@ -4,7 +4,7 @@
     background-color: gray;
     color: honeydew;
     font-family: Arial, Helvetica, sans-serif;
-    position: fixed;
+    /* position: fixed; */
     z-index: 1;
     width: 100%;
     padding: 0;
