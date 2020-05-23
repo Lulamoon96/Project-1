@@ -26,13 +26,14 @@
                     <div class="card-body">
                         <h5 class="card-title">Breakfast</h5>
                         <p class="card-text">Start the Day Right!</p>
+                        <img id="breakfastImage">
                     </div>
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item" id="breakfastRecipe"></li>
                         <li class="list-group-item" id="breakfastSource"></li>
                         <li class="list-group-item" id="breakfastCalories"></li>
                         <div class="card-body" style="text-align: center;">
-                            <button type="button" class="btn btn-primary" data-toggle="modal"
+                            <button type="button" class="btn btn-primary search" data-toggle="modal"
                                 data-target="#breakfastModal">Search Recipes</button>
                         </div>
                 </div>
@@ -49,11 +50,12 @@
                             </button>
                         </div>
                         <div class="modal-body">
-
+                            <ul class="recipesModal" id="breakfastReciList">
+                            </ul>
                             <div class="form-group">
-                                <input type="text" class="form-control">
+                                <input type="text" class="form-control" id="breakfastInput">
                             </div>
-                            <button type="button" class="btn btn-outline-secondary searchRecipes">Search for
+                            <button type="button" class="btn btn-outline-secondary searchRecipes" meal="breakfast">Search for
                                 Recipes</button>
 
                             <div class="div recipeResults"></div>
@@ -68,6 +70,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Lunch</h5>
                             <p class="card-text">What's For Lunch?</p>
+                            <img id="lunchImage">
                         </div>
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item" id="lunchRecipe"></li>
@@ -75,7 +78,7 @@
                             <li class="list-group-item" id="lunchCalories"></li>
                         </ul>
                         <div class="card-body" style="text-align: center;">
-                            <button type="button" class="btn btn-primary" data-toggle="modal"
+                            <button type="button" class="btn btn-primary search" data-toggle="modal"
                                 data-target="#lunchModal">Search Recipes</button>
                         </div>
                     </div>
@@ -93,11 +96,12 @@
                             </button>
                         </div>
                         <div class="modal-body">
-
+                            <ul class="recipesModal" id="lunchReciList">
+                            </ul>
                             <div class="form-group">
-                                <input type="text" class="form-control">
+                                <input type="text" class="form-control" id="lunchInput">
                             </div>
-                            <button type="button" class="btn btn-outline-secondary searchRecipes">Search for
+                            <button type="button" class="btn btn-outline-secondary searchRecipes" meal="lunch">Search for
                                 Recipes</button>
 
                             <div class="div recipeResults"></div>
@@ -113,14 +117,15 @@
                             <div class="card-body">
                                 <h5 class="card-title">Dinner</h5>
                                 <p class="card-text">Dinner Time!</p>
+                                <img id="dinnerImage">
                             </div>
                             <ul class="list-group list-group-flush">
                                 <li class="list-group-item" id="dinnerRecipe"></li>
                                 <li class="list-group-item" id="dinnerSource"></li>
                                 <li class="list-group-item" id="dinnerCalories"></li>
                             </ul>
-                            <div class="card-body" style="text-align: center;">
-                                <button type="button" class="btn btn-primary" data-toggle="modal"
+                            <div class="card-body" style="text-align: center;"> 
+                                <button type="button" class="btn btn-primary search" data-toggle="modal"
                                     data-target="#dinnerModal">Search Recipes</button>
                             </div>
                         </div>
@@ -138,11 +143,12 @@
                             </button>
                         </div>
                         <div class="modal-body">
-
+                            <ul class="recipesModal" id="dinnerReciList">
+                            </ul>
                             <div class="form-group">
-                                <input type="text" class="form-control">
+                                <input type="text" class="form-control" id="dinnerInput">
                             </div>
-                            <button type="button" class="btn btn-outline-secondary searchRecipes">Search for
+                            <button type="button" class="btn btn-outline-secondary searchRecipes" meal="dinner">Search for
                                 Recipes</button>
 
                             <div class="div recipeResults"></div>
@@ -151,7 +157,11 @@
                 </div>
             </div>
         </div>
+
+        <h2><b>Total Calories:</b> <span id="calorieCount"></span></h2>
+
         <div class="div row" style="margin-top: 20px;">
+
             <button type="button" class="btn btn-secondary" id="locate">Locate</button>
             <div class="jumbotron jumbotron-fluid" style="margin-top: 50px; width: 100%;">
                 <div class="container">
@@ -167,6 +177,7 @@
 
     
     <div class="separator"></div>
+
 </div>
     <script src="https://code.jquery.com/jquery-3.5.1.js"
         integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
