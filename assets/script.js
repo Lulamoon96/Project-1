@@ -48,22 +48,28 @@ $("#locate").click(function(){
     }
 
     service.textSearch(request, function(results, status) {
+
       console.log(results)
       if (status === google.maps.places.PlacesServiceStatus.OK) {
+
         for (var i = 0; i < results.length; i++) {
+
           createMarker(results[i]);
+
         }
+
         map.setCenter(results[0].geometry.location)
+
       }
   
     })
-
 
   })
 
 })
 
 function createMarker(place) {
+
   var marker = new google.maps.Marker({
     map: map,
     position: place.geometry.location
@@ -73,6 +79,7 @@ function createMarker(place) {
     infowindow.setContent(place.name);
     infowindow.open(map, this);
   });
+
 }
 
 function initMap() {
@@ -111,29 +118,90 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
   infoWindow.open(map);
 }
 
-window.eqfeed_callback = function(groceryStores) {
-
-
-}
-
-
-
-
 //End of map stuff
 
-// var queryURL = "https://api.edamam.com/search?q=lobster&app_id=ee9aaaa5&app_key=60bd104228a51c57d3cdbfc4e2822a63"
+
+$(".searchRecipes").click(function(){
+
+    var meal = $(this).attr("meal")
+    var food = $("#" + meal + "Input").val()
+    var queryURL = "https://api.edamam.com/search?q=" + food + "&to=5&app_id=ee9aaaa5&app_key=60bd104228a51c57d3cdbfc4e2822a63"
+
+    $.ajax({
+
+        url: queryURL,
+        method: "GET"
+
+    }).then(function(response) {
+
+        recipes = response.hits
+        currList = $("#" + meal + "ReciList") 
+        recipes.forEach(element => {
+
+          currList.append('<li image="' + element.recipe.image + '" meal="' + meal + '"><h3 data="label"><b>' + element.recipe.label + ' </b></h3><h4 data="source">' + element.recipe.source + ' </h4><h4 data="calories">' + element.recipe.calories.toFixed(2) + ' calories</h4><h5 data="link"><a href="' + element.recipe.url + '">Link</a></h5><br></li>')
+          
+        })
+
+    })
+
+})
 
 
+$(".modal").on("click", "li", function(){
 
-// $.ajax({
+    $('.modal').modal('hide')
 
-//     url: queryURL,
-//     method: "GET"
+    var meal = $(this).attr("meal")
+    var label = $(this).find('[data="label"]').text()
+    var source = $(this).find('[data="source"]').text()
+    var calories = $(this).find('[data="calories"]').text()
+    var link = strip_html_tags($(this).find('[data="link"]').text())
+    var image = $(this).attr("image")
 
-// }).then(function(response) {
+    $("#" + meal + "Image").attr("src", image)
+    $("#" + meal + "Recipe").html("<h3><a href='" + link + "'>" + label + "</a></h3>")
+    $("#" + meal + "Source").html("<h3>" + source + "</h3>")
+    $("#" + meal + "Calories").html("<h3>" + calories + "</h3>")
+    calorieCount()
 
-//     console.log(response)
-//     $("#test").text(recipe)
+})
 
-// })
 
+var calories = 0
+
+function calorieCount(){
+
+
+  if ($("#breakfastCalories").text()) {
+
+    calories = calories + parseInt($("#breakfastCalories").text())
+
+  }
+  
+  
+  if ($("#lunchCalories").text()) {
+    
+    calories = calories + parseInt($("#lunchCalories").text())
+    
+  }
+  
+  if ($("#dinnerCalories").text()) {
+
+    calories = calories + parseInt($("#dinnerCalories").text())
+
+  }
+
+  console.log(calories)
+  $("#calorieCount").text(calories)
+  
+}
+
+function strip_html_tags(str){
+
+   if ((str===null) || (str===''))
+       return false;
+  else
+   str = str.toString();
+  return str.replace(/<[^>]*>/g, '');
+
+}
