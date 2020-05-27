@@ -1,4 +1,4 @@
-##What's that Recipe?!
+What's that Recipe?!
 ---
 
 We all gotta eat right? So why not explore some of our favorite recipe's and get to the kitchen.
@@ -29,3 +29,6 @@ GIVEN that a user needs to prepare a dish for a given meal
 WHEN choosing selecting a specific recipe
 
 THEN the map will generate the local grocery stores that have the recipe items
+
+---
+Link: https://lulamoon96.github.io/Project-1/
